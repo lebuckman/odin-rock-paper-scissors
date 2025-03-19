@@ -16,8 +16,6 @@ function playGame() {
 }
 
 function playRound(humanChoice, computerChoice) {
-    humanChoice = humanChoice.toLowerCase();
-
     if (humanChoice === computerChoice) {
         console.log("Tie!");
     } else if (humanChoice === "rock") {
@@ -77,5 +75,5 @@ function getComputerChoice() {
 }
 
 function getHumanChoice() {
-    return prompt("Rock, paper, or scissors?");
+    return prompt("Rock, paper, or scissors?").toLowerCase();
 }
