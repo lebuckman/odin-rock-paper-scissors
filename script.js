@@ -6,8 +6,35 @@ const humanSelection = getHumanChoice();
 playRound(humanSelection, computerSelection);
 
 function playRound(humanChoice, computerChoice) {
-    console.log(humanChoice);
-    console.log(computerChoice);
+    humanChoice = humanChoice.toLowerCase();
+
+    if (humanChoice === computerChoice) {
+        console.log("Tie!");
+    } else if (humanChoice === "rock") {
+        if (computerChoice === "paper") {
+            console.log("You lose! Paper beats Rock.");
+            computerScore++;
+        } else {
+            console.log("You win! Rock beats Scissors.");
+            humanScore++;
+        }
+    } else if (humanChoice === "paper") {
+        if (computerChoice === "scissors") {
+            console.log("You lose! Scissors beats Paper.");
+            computerScore++;
+        } else {
+            console.log("You win! Paper beats Rock.");
+            humanScore++;
+        }
+    } else {
+        if (computerChoice === "rock") {
+            console.log("You lose! Rock beats Scissors.");
+            computerScore++;
+        } else {
+            console.log("You win! Scissors beats Paper.");
+            humanScore++;
+        }
+    }
 }
 
 function getComputerChoice() {
