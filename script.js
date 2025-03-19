@@ -17,7 +17,9 @@ function playGame() {
 
 function playRound(humanChoice, computerChoice) {
     if (humanChoice === computerChoice) {
-        console.log("Tie!");
+        const formatChoice =
+            humanChoice[0].toUpperCase() + humanChoice.slice(1);
+        console.log(`Tie! You both chose ${formatChoice}!`);
     } else if (humanChoice === "rock") {
         if (computerChoice === "paper") {
             console.log("You lose! Paper beats Rock.");
