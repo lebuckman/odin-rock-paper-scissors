@@ -16,9 +16,6 @@ function playGame() {
 }
 
 function playRound(humanChoice, computerChoice) {
-    console.log("human: " + humanChoice);
-    console.log("computer: " + computerChoice);
-
     if (humanChoice === computerChoice) {
         console.log(`Tie! You both chose ${humanChoice}!`);
     } else if (didHumanWin(humanChoice, computerChoice)) {
