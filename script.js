@@ -11,10 +11,6 @@ function playGame() {
         const humanSelection = getHumanChoice();
 
         playRound(humanSelection, computerSelection);
-
-        console.log(
-            `Your Score: ${humanScore}  |  Opponent Score: ${computerScore}`
-        );
     }
     displayFinalScoreMsg();
 }
@@ -49,6 +45,10 @@ function playRound(humanChoice, computerChoice) {
             humanScore++;
         }
     }
+
+    console.log(
+        `Your Score: ${humanScore}  |  Opponent Score: ${computerScore}`
+    );
 }
 
 function displayFinalScoreMsg() {
