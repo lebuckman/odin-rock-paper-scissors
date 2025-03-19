@@ -10,6 +10,9 @@ function playGame() {
         const computerSelection = getComputerChoice();
         const humanSelection = getHumanChoice();
         playRound(humanSelection, computerSelection);
+        console.log(
+            `Your Score: ${humanScore}  |  Opponent Score: ${computerScore}`
+        );
     }
 }
 
