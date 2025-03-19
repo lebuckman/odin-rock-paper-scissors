@@ -9,11 +9,14 @@ function playGame() {
     for (let round = 1; round <= ROUNDS; round++) {
         const computerSelection = getComputerChoice();
         const humanSelection = getHumanChoice();
+
         playRound(humanSelection, computerSelection);
+
         console.log(
             `Your Score: ${humanScore}  |  Opponent Score: ${computerScore}`
         );
     }
+    displayFinalScoreMsg();
 }
 
 function playRound(humanChoice, computerChoice) {
@@ -45,6 +48,17 @@ function playRound(humanChoice, computerChoice) {
             console.log("You win! Scissors beats Paper.");
             humanScore++;
         }
+    }
+}
+
+function displayFinalScoreMsg() {
+    console.log("Final Score");
+    if (computerScore > humanScore) {
+        console.log("You lost :(");
+    } else if (computerScore < humanScore) {
+        console.log("You won!!!!");
+    } else {
+        console.log("Tie!? :O");
     }
 }
 
