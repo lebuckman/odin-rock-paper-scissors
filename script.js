@@ -1,9 +1,17 @@
 let computerScore = 0;
 let humanScore = 0;
 
-const computerSelection = getComputerChoice();
-const humanSelection = getHumanChoice();
-playRound(humanSelection, computerSelection);
+playGame();
+
+function playGame() {
+    const ROUNDS = 5;
+
+    for (let round = 1; round <= ROUNDS; round++) {
+        const computerSelection = getComputerChoice();
+        const humanSelection = getHumanChoice();
+        playRound(humanSelection, computerSelection);
+    }
+}
 
 function playRound(humanChoice, computerChoice) {
     humanChoice = humanChoice.toLowerCase();
