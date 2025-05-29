@@ -55,6 +55,7 @@ function reset() {
     computerScore = 0;
     humanScore = 0;
     endGameBanner.classList.add("hidden");
+    endGameBanner.classList.remove("defeat", "victory");
 }
 
 function displayFinalScoreMsg() {
