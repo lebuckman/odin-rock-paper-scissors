@@ -2,7 +2,8 @@ let computerScore = 0;
 let humanScore = 0;
 
 const result = document.querySelector(".result-msg");
-const score = document.querySelector(".current-score");
+const yourScore = document.querySelector(".your-score");
+const opponentScore = document.querySelector(".opponent-score");
 const humanChoicesContainer = document.querySelector(".player-options");
 const humanChoices = humanChoicesContainer.querySelectorAll("button");
 
@@ -23,7 +24,8 @@ function playRound(humanChoice, computerChoice) {
         computerScore++;
     }
 
-    score.textContent = `Your Score: ${humanScore}  |  Opponent Score: ${computerScore}`;
+    yourScore.textContent = "Your Score: " + humanScore;
+    opponentScore.textContent = "Opponent Score: " + computerScore;
 
     if (didPlayerWin()) {
         displayFinalScoreMsg();

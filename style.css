@@ -29,11 +29,11 @@ p {
     margin: 0;
 }
 
-/* remove default bold styling */
+/* change default bold styling */
 h1,
 h2,
 p {
-    font-weight: 400;
+    font-weight: 600;
 }
 
 /* set up the body */
@@ -41,7 +41,6 @@ body {
     line-height: 1.5;
     min-height: 100vh;
     font-family: "Atma", sans-serif;
-    font-weight: 600;
     color: #fff;
     background-color: var(--clr-dark);
 }
@@ -95,4 +94,23 @@ h2 {
 .player-options button img {
     width: 350px;
     height: 350px;
+}
+
+/* score */
+
+.scoring {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-block: 60px;
+}
+
+.result-msg {
+    font-size: 2.25rem;
+    margin-bottom: 35px;
+}
+
+.your-score,
+.opponent-score {
+    font-size: 2rem;
 }
