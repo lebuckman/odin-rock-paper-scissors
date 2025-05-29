@@ -3,6 +3,7 @@ let humanScore = 0;
 
 const humanChoicesContainer = document.querySelector(".player-options");
 const humanChoices = humanChoicesContainer.querySelectorAll("button");
+const resetGame = document.querySelector("button.reset-btn");
 const result = document.querySelector(".result-msg");
 const yourScore = document.querySelector(".your-score");
 const opponentScore = document.querySelector(".opponent-score");
@@ -13,6 +14,10 @@ humanChoices.forEach((choice) => {
     choice.addEventListener("click", () => {
         playRound(choice.id, getComputerChoice());
     });
+});
+
+resetGame.addEventListener("click", () => {
+    reset();
 });
 
 function playRound(humanChoice, computerChoice) {
@@ -44,6 +49,12 @@ function didHumanWin(humanChoice, computerChoice) {
         (humanChoice === "Scissors" && computerChoice === "Paper") ||
         (humanChoice === "Paper" && computerChoice === "Rock")
     );
+}
+
+function reset() {
+    computerScore = 0;
+    humanScore = 0;
+    endGameBanner.classList.add("hidden");
 }
 
 function displayFinalScoreMsg() {
