@@ -9,6 +9,7 @@ const yourScore = document.querySelector(".your-score");
 const opponentScore = document.querySelector(".opponent-score");
 const finalMsg = document.querySelector(".final-msg");
 const endGameBanner = document.querySelector(".end-game-banner");
+const instructions = document.querySelector(".instructions");
 
 humanChoices.forEach((choice) => {
     choice.addEventListener("click", () => {
@@ -21,6 +22,8 @@ resetGame.addEventListener("click", () => {
 });
 
 function playRound(humanChoice, computerChoice) {
+    instructions.classList.add("hidden");
+
     if (humanChoice === computerChoice) {
         result.textContent = `Tie! You both chose ${humanChoice}!`;
     } else if (didHumanWin(humanChoice, computerChoice)) {
@@ -56,6 +59,7 @@ function reset() {
     humanScore = 0;
     endGameBanner.classList.add("hidden");
     endGameBanner.classList.remove("defeat", "victory");
+    instructions.classList.remove("hidden");
 }
 
 function displayFinalScoreMsg() {

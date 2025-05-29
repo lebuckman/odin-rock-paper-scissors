@@ -166,3 +166,14 @@ h2 {
     box-shadow: 0 0 10px #fff;
     transform: scale(105%);
 }
+
+/* instructions */
+
+.instructions {
+    text-align: center;
+    font-size: 4rem;
+}
+
+.instructions.hidden {
+    display: none;
+}
