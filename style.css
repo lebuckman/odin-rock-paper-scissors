@@ -1,0 +1,46 @@
+/* ------------------- */
+/* Custom properties   */
+/* ------------------- */
+
+:root {
+    --clr-accent: #f1e4c6;
+    --clr-dark: #161a29;
+    --clr-yellow: #feb409;
+    --clr-red: #762323;
+    --clr-green: #23764d;
+}
+
+/* ------------------- */
+/* Reset               */
+/* ------------------- */
+
+/* box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* reset margins */
+body,
+h1,
+h2,
+p {
+    margin: 0;
+}
+
+/* remove default bold styling */
+h1,
+h2,
+p {
+    font-weight: 400;
+}
+
+/* set up the body */
+body {
+    line-height: 1.5;
+    min-height: 100vh;
+    font-family: "Atma", sans-serif;
+    color: #fff;
+    background-color: var(--clr-dark);
+}
