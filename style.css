@@ -177,3 +177,15 @@ h2 {
 .instructions.hidden {
     display: none;
 }
+
+/* ------------------- */
+/* Media Queries       */
+/* ------------------- */
+
+/* tablet */
+@media (max-width: 834px) {
+}
+
+/* mobile */
+@media (max-width: 375px) {
+}
