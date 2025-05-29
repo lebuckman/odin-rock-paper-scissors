@@ -12,29 +12,31 @@
 	<link href="https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-	<section class="heading">
-		<h1>Rock Paper Scissors</h1>
-		<h2>Choose your hand...</h2>
-	</section>
-
-	<section class="player-options">
-		<button id="Rock"><img src="./images/rocks.png" alt="Rock"></button>
-		<button id="Paper"><img src="./images/paper.png" alt="Paper"></button>
-		<button id="Scissors"><img src="./images/scissors.png" alt="Scissors"></button>
-	</section>
-
-	<section class="scoring">
-		<p class="result-msg"></p>
-		<p class="your-score"></p>
-		<p class="opponent-score"></p>
-	</section>
+	<div class="container">
+		<section class="heading">
+			<h1>Rock Paper Scissors</h1>
+			<h2>Choose your hand...</h2>
+		</section>
+	
+		<section class="player-options">
+			<button id="Rock"><img src="./images/rocks.png" alt="Rock"></button>
+			<button id="Paper"><img src="./images/paper.png" alt="Paper"></button>
+			<button id="Scissors"><img src="./images/scissors.png" alt="Scissors"></button>
+		</section>
+	
+		<section class="scoring">
+			<p class="result-msg"></p>
+			<p class="your-score"></p>
+			<p class="opponent-score"></p>
+		</section>
+		
+		<p class="instructions">First to 5 points win!</p>
+	</div>
 
 	<div class="end-game-banner hidden">
 		<h2 class="final-msg"></h2>
 		<button class="reset-btn">Play again?</button>
 	</div>
-
-	<p class="instructions">First to 5 points win!</p>
 
 	<script src="./script.js"></script>
 </body>

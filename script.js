@@ -10,6 +10,7 @@ const opponentScore = document.querySelector(".opponent-score");
 const finalMsg = document.querySelector(".final-msg");
 const endGameBanner = document.querySelector(".end-game-banner");
 const instructions = document.querySelector(".instructions");
+const container = document.querySelector(".container");
 
 humanChoices.forEach((choice) => {
     choice.addEventListener("click", () => {
@@ -66,7 +67,7 @@ function reset() {
     endGameBanner.classList.remove("defeat", "victory");
     instructions.classList.remove("hidden");
 
-    disableChoices(false);
+    container.classList.remove("dim");
 }
 
 function displayFinalScoreMsg() {
@@ -79,7 +80,7 @@ function displayFinalScoreMsg() {
     }
 
     endGameBanner.classList.remove("hidden");
-    disableChoices(true);
+    container.classList.add("dim");
 }
 
 function getComputerChoice() {
@@ -94,10 +95,4 @@ function getComputerChoice() {
         computerChoice = "Scissors";
     }
     return computerChoice;
-}
-
-function disableChoices(disable) {
-    humanChoices.forEach((choice) => {
-        choice.disabled = disable;
-    });
 }
