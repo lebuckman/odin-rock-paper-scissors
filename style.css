@@ -6,8 +6,8 @@
     --clr-accent: #f1e4c6;
     --clr-dark: #161a29;
     --clr-yellow: #feb409;
-    --clr-red: rgba(118, 35, 35, 0.95);
-    --clr-green: rgba(35, 118, 77, 0.95);
+    --clr-defeat: rgba(118, 35, 35, 0.95);
+    --clr-victory: rgba(35, 118, 77, 0.95);
 }
 
 /* ------------------- */
@@ -131,7 +131,18 @@ h2 {
     justify-content: center;
     gap: 45px;
     border-radius: 50px;
-    background-color: var(--clr-green);
+}
+
+.end-game-banner.hidden {
+    display: none;
+}
+
+.end-game-banner.victory {
+    background-color: var(--clr-victory);
+}
+
+.end-game-banner.defeat {
+    background-color: var(--clr-defeat);
 }
 
 .end-game-banner .final-msg {
