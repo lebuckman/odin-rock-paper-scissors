@@ -57,6 +57,11 @@ function didHumanWin(humanChoice, computerChoice) {
 function reset() {
     computerScore = 0;
     humanScore = 0;
+
+    result.textContent = "";
+    yourScore.textContent = "";
+    opponentScore.textContent = "";
+
     endGameBanner.classList.add("hidden");
     endGameBanner.classList.remove("defeat", "victory");
     instructions.classList.remove("hidden");
@@ -71,9 +76,6 @@ function displayFinalScoreMsg() {
         endGameBanner.classList.add("victory");
     }
 
-    result.textContent = "";
-    yourScore.textContent = "";
-    opponentScore.textContent = "";
     endGameBanner.classList.remove("hidden");
 }
 
