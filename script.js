@@ -1,8 +1,8 @@
 let computerScore = 0;
 let humanScore = 0;
 
-const result = document.querySelector(".result");
-const score = document.querySelector(".score");
+const result = document.querySelector(".result-msg");
+const score = document.querySelector(".current-score");
 const humanChoicesContainer = document.querySelector(".player-options");
 const humanChoices = humanChoicesContainer.querySelectorAll("button");
 
