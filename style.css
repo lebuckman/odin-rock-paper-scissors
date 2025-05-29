@@ -44,3 +44,26 @@ body {
     color: #fff;
     background-color: var(--clr-dark);
 }
+
+/* ------------------- */
+/* Components          */
+/* ------------------- */
+
+h1 {
+    font-size: 4rem;
+    font-weight: 600;
+    color: var(--clr-accent);
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-block: 70px;
+}
