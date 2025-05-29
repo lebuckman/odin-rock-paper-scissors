@@ -65,6 +65,8 @@ function reset() {
     endGameBanner.classList.add("hidden");
     endGameBanner.classList.remove("defeat", "victory");
     instructions.classList.remove("hidden");
+
+    disableChoices(false);
 }
 
 function displayFinalScoreMsg() {
@@ -77,6 +79,7 @@ function displayFinalScoreMsg() {
     }
 
     endGameBanner.classList.remove("hidden");
+    disableChoices(true);
 }
 
 function getComputerChoice() {
@@ -91,4 +94,10 @@ function getComputerChoice() {
         computerChoice = "Scissors";
     }
     return computerChoice;
+}
+
+function disableChoices(disable) {
+    humanChoices.forEach((choice) => {
+        choice.disabled = disable;
+    });
 }
