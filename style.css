@@ -6,8 +6,8 @@
     --clr-accent: #f1e4c6;
     --clr-dark: #161a29;
     --clr-yellow: #feb409;
-    --clr-red: #762323;
-    --clr-green: #23764d;
+    --clr-red: rgba(118, 35, 35, 0.95);
+    --clr-green: rgba(35, 118, 77, 0.95);
 }
 
 /* ------------------- */
@@ -43,6 +43,7 @@ body {
     font-family: "Atma", sans-serif;
     color: #fff;
     background-color: var(--clr-dark);
+    position: relative;
 }
 
 /* ------------------- */
@@ -65,7 +66,7 @@ h2 {
     flex-direction: column;
     align-items: center;
     gap: 12px;
-    margin-block: 70px;
+    padding-block: 70px;
 }
 
 /* player options */
@@ -113,4 +114,44 @@ h2 {
 .your-score,
 .opponent-score {
     font-size: 2rem;
+}
+
+/* end screen */
+
+.end-game-banner {
+    width: 712px;
+    height: 470px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 45px;
+    border-radius: 50px;
+    background-color: var(--clr-green);
+}
+
+.end-game-banner .final-msg {
+    font-size: 4rem;
+    color: var(--clr-yellow);
+}
+
+.end-game-banner .reset-btn {
+    padding: 28px 52px;
+    font-size: 2.25rem;
+    font-family: inherit;
+    font-weight: 600;
+    border: none;
+    border-radius: 15px;
+    color: var(--clr-dark);
+    transition: all ease-in 100ms;
+}
+
+.end-game-banner .reset-btn:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px #fff;
+    transform: scale(105%);
 }

@@ -4,6 +4,7 @@ let humanScore = 0;
 const result = document.querySelector(".result-msg");
 const yourScore = document.querySelector(".your-score");
 const opponentScore = document.querySelector(".opponent-score");
+const finalMsg = document.querySelector(".final-msg");
 const humanChoicesContainer = document.querySelector(".player-options");
 const humanChoices = humanChoicesContainer.querySelectorAll("button");
 
@@ -46,11 +47,11 @@ function didHumanWin(humanChoice, computerChoice) {
 
 function displayFinalScoreMsg() {
     if (computerScore > humanScore) {
-        score.textContent = "You lost :(";
+        finalMsg.textContent = "You lost :(";
     } else if (computerScore < humanScore) {
-        score.textContent = "You won!!!!";
+        finalMsg.textContent = "You won!!!!";
     } else {
-        score.textContent = "Tie!? :O";
+        finalMsg.textContent = "Tie!? :O";
     }
 }
 
